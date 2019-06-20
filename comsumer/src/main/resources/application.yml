@@ -1,0 +1,14 @@
+spring:
+  rabbitmq:
+    password: guest
+    username: guest
+    addresses: 192.168.99.100:5672
+    listener:
+      simple:
+      #处理的channel最大数量
+        max-concurrency: 5
+        #消息确认设为手动
+        acknowledge-mode: manual
+        #每次取一条消息处理
+        prefetch: 1
+        concurrency: 5
